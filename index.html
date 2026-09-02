@@ -426,10 +426,13 @@
     position:relative;padding-left:20px;font-size:14.5px;line-height:1.5;color:var(--text);
   }
   .j-goals li::before{
-    content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;
-    border:1.5px solid var(--teach);transform:rotate(45deg);
+    content:"";position:absolute;left:2px;top:.58em;width:8px;height:8px;
+    border-radius:50%;border:1.5px solid var(--teach);
   }
-  .j-duo{display:grid;grid-template-columns:1fr 1fr;gap:22px 30px;margin-top:22px}
+  .j-duo{display:grid;grid-template-columns:1fr 1fr;gap:22px 30px;margin-top:22px;align-items:start}
+  /* μέσα στο .j-duo τα δύο μπλοκ είναι διπλανές στήλες, όχι διαδοχικά:
+     το margin-top του γενικού κανόνα έσπρωχνε το δεξί προς τα κάτω */
+  .j-duo .j-block + .j-block{margin-top:0}
   @media(max-width:760px){.j-duo{grid-template-columns:1fr;gap:20px}}
   .j-duo p{font-size:14.5px;color:var(--muted);line-height:1.6}
   .j-goal-line{
